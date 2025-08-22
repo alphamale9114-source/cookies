@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campus Food Redistribution Platform</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Campus Food Redistribution Platform</h1>
+            <p>Reduce food waste, help the community</p>
+        </div>
+    </header>
+
+    <div class="container main-content">
+        <div class="section">
+            <h2>Report Extra Food</h2>
+            <form id="foodReportForm">
+                <div>
+                    <label for="source">Food Source:</label>
+                    <select id="source" required>
+                        <option value="">Select Source</option>
+                        <option value="canteen">Canteen</option>
+                        <option value="hostel">Hostel</option>
+                        <option value="event">Event</option>
+                    </select>
+                </div>
+                
+                <div>
+                    <label for="foodType">Food Type:</label>
+                    <input type="text" id="foodType" placeholder="e.g., Vegetarian Meals, Snacks" required>
+                </div>
+
+                <div>
+                    <label for="quantity">Quantity (servings):</label>
+                    <input type="number" id="quantity" min="1" required>
+                </div>
+
+                <div>
+                    <label for="availableFrom">Available From:</label>
+                    <input type="datetime-local" id="availableFrom" required>
+                </div>
+
+                <div>
+                    <label for="availableTo">Available Until:</label>
+                    <input type="datetime-local" id="availableTo" required>
+                </div>
+
+                <div>
+                    <label for="description">Additional Details:</label>
+                    <textarea id="description" rows="3" placeholder="Any specific details about the food..."></textarea>
+                </div>
+
+                <button type="submit">Report Food Availability</button>
+            </form>
+        </div>
+
+        <div class="section">
+            <h2>Register for Available Food</h2>
+            <div class="food-listings" id="foodListings">
+                <!-- Food listings will be dynamically populated -->
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+    
+</body>
+</html>
